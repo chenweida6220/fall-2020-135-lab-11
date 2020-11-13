@@ -7,16 +7,18 @@ using namespace std;
 int main() {
   // Task A. Class Profile
   Profile p1("marco", "Marco");
-  cout << "Username: " << p1.getUsername() << endl;
-  cout << "Displayname: " << p1.getFullName() << endl;
-
-  cout << endl;
+  cout << p1.getUsername() << endl; // marco
+  cout << p1.getFullName() << endl; // Marco (@marco)
 
   p1.setDisplayName("Marco Rossi");
-  cout << "Changed Displayname.\nUsername: " << p1.getUsername() << endl;
-  cout << "Displayname: " << p1.getFullName() << endl;
+  cout << p1.getUsername() << endl; // marco
+  cout << p1.getFullName() << endl; // Marco Rossi (@marco)
 
-  cout << "----------" << endl;
+  Profile p2("tarma1", "Tarma Roving");
+  cout << p2.getUsername() << endl; // tarma1
+  cout << p2.getFullName() << endl; // Tarma Roving (@tarma1)
+
+  cout << "----------" << endl << endl;
 
   // Task B. Class Network: Adding users
   Network nw;
@@ -33,7 +35,7 @@ int main() {
 
   cout << nw.addUser("yoshi", "Yoshi") << endl;     // false (0)
 
-  cout << "----------" << endl;
+  cout << "----------" << endl << endl;
 
   // Task C. Class Network: Following others
   Network nw2;
@@ -65,5 +67,5 @@ int main() {
 
   nw2.printDot();
 
-  cout << "----------" << endl;
+  cout << "----------" << endl << endl;
 }

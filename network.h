@@ -9,7 +9,7 @@ private:
   int numUsers;                    // number of registered users
   Profile profiles[MAX_USERS];     // user profiles array:
                                    // mapping integer ID -> Profile
- bool following[MAX_USERS][MAX_USERS];  // friendship matrix:
+  bool following[MAX_USERS][MAX_USERS];  // friendship matrix:
                                         // following[id1][id2] == true when id1 is following id2
 
   // Returns user ID (index in the 'profiles' array) by their username
